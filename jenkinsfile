@@ -13,7 +13,7 @@ pipeline {
         stage ('Run JAR File') {
             steps {
                 script {
-                    def jarFilePath = 'C:/ProgramData/Jenkins/.jenkins/workspace/demo3/target/sprinboot-restapi-0.0.1-SNAPSHOT.jar'
+                    def jarFilePath = 'C:\Users\Admin\.jenkins\workspace\springboot-jenkins\target\springboot-jenkins-0.0.1-SNAPSHOT.jar'
                     def batchScript = "cmd /c java -jar \"${jarFilePath}\""
                     bat label: 'Run JAR in External CMD', script: batchScript
                 }
